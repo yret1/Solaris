@@ -22,11 +22,10 @@ const planetbody = document.querySelector(".planet__left--planet");
 
 const renderPlanet = async (planet) => {
 
-    console.log(planet)
     planetPage.style.display = "flex";
-    planetName.innerHTML = "Loading...";
-    planetDescription.innerHTML = "Loading...";
 
+
+    // Switch statement to check which planet was clicked and render the page accordingly
     switch(planet) {
         case "sun":
             planetName.innerHTML = planets[0].name;
