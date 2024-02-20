@@ -1,6 +1,8 @@
 import fetcher from "./fetch";
 import { planets } from "./fetch";
 
+import closePage from "./Closepage";
+
 import renderPlanet from "./render";
 
 
@@ -17,4 +19,11 @@ planetButtons.forEach((button) => {
 
     renderPlanet(e.target.id);
   });
+});
+
+const closeBtn = document.querySelector("#closebtn");
+
+
+closeBtn.addEventListener("click", () => {
+  closePage();
 });
