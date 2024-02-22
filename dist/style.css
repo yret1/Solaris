@@ -163,6 +163,29 @@ body{
     box-shadow: 0 0 10px 5px #fff;
     scale: 1.05;
 }
+
+
+@keyframes popTip {
+    0% {
+        transform: scale(0.8), translateY(-200px);
+        rotate: 90deg;
+        opacity: 0;
+        
+    }
+    95% {
+        transform: scale(1.1) , translateY(40px);
+        rotate: -10deg;
+        opacity: 1;
+        y: 10px;
+    }
+    100% {
+        transform: scale(1), translateY(0px);
+        rotate: 0deg;
+        opacity: 1;
+       
+    }
+    
+}
 .planettip {
     visibility: hidden;
     width: 120px;
@@ -178,15 +201,13 @@ body{
     top: -50px;
     left: 50%;
     margin-left: -60px; 
-    
-   
-    opacity: 0;
-    transition: opacity 0.3s;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
   .planet:hover .planettip {
     visibility: visible;
     opacity: 1;
+    animation: popTip ease-in-out 0.7s;
   }
 
 
